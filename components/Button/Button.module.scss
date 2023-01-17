@@ -1,0 +1,29 @@
+@import 'styles/common';
+
+.button {
+  padding: 24px 32px;
+  font-family: $font-content;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: $primary-100;
+  background: $gradient-2;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary-80;
+  }
+
+  &:active {
+    color: $white;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}

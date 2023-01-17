@@ -1,0 +1,59 @@
+@import 'styles/common';
+
+.footer {
+  padding: 1px 0 0;
+  background: $gradient-1;
+
+  .content {
+    display: flex;
+    padding: 33px calc((100% - $container-width) / 2);
+    background: linear-gradient($white-05, $white-05), linear-gradient($background, $background);
+
+    .address {
+      max-width: 231px;
+      width: 100%;
+      margin: 0 188px 0 0;
+
+      address {
+        @include paragraph-1;
+        color: $white;
+      }
+    }
+
+    .company {
+      max-width: 244px;
+      width: 100%;
+      margin: 0 165px 0 0;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 16px 145px;
+        height: 91px;
+
+        .link {
+          @include paragraph-2;
+          color: $white;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .socialMedia {
+      ul {
+        display: flex;
+        gap: 24px;
+      }
+    }
+
+    h4 {
+      margin: 0 0 24px;
+      font-family: $font-footer;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+}

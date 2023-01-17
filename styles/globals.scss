@@ -1,0 +1,39 @@
+@import "common";
+@import "reset";
+
+html, body, #__next {
+    height: 100%;
+}
+
+body {
+    background: $background;
+}
+
+html {
+    font-size: 16px;
+    color: $white;
+}
+
+h1 {
+    @include heading-1;
+}
+
+h2 {
+    @include heading-2;
+}
+
+h3 {
+    @include heading-3;
+}
+
+h4 {
+    @include heading-4;
+}
+
+p {
+    @include paragraph-1;
+}
+
+small {
+    @include paragraph-2;
+}
