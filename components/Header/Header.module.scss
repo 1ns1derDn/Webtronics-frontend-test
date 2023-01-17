@@ -1,0 +1,23 @@
+@import 'styles/common';
+
+.header {
+  margin: 0 0 78px;
+  padding: 38px calc((100% - $container-width) / 2);
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+
+    .brand {
+      flex-grow: 1;
+    }
+
+    .link {
+      @include paragraph-1;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import 'styles/common';
+
+.inputText {
+  @include card;
+  border-radius: 8px;
+
+  &.error {
+    background: $error-20;
+    border: 1px solid $error;
+
+    &::before {
+      display: none;
+    }
+
+    input {
+      color: $white;
+    }
+  }
+
+  &.disabled {
+    background: $white-05;
+    border: 1px solid $border;
+
+    input {
+      color: $border;
+    }
+  }
+
+  input {
+    @include paragraph-1;
+    width: 100%;
+    padding: 24px;
+    color: $primary-40;
+    background: $white-05;
+    border: none;
+    outline: none;
+
+    &:focus {
+      color: $white;
+    }
+  }
+
+}
+
+.errorMessage {
+  @include paragraph-1;
+  margin: 4px 0 0;
+}
