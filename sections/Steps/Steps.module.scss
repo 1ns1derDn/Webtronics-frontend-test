@@ -1,0 +1,94 @@
+@import 'styles/common';
+
+.steps {
+  margin: 0 0 180px;
+
+  h2 {
+    margin: 0 0 56px;
+    text-align: center;
+  }
+
+  ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 181px 264px;
+    padding: 18.5px 0 132.5px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 108px;
+      bottom: 108px;
+      width: 4px;
+      background: $gradient-2;
+    }
+
+    li {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -40px;
+        transform: translate(100%, -50%);
+        width: 104px;
+        height: 24px;
+        background: url(/decorations/step-card-arrow.svg) no-repeat;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -18.5px;
+        bottom: -18.5px;
+        right: -16px;
+        width: 146px;
+        background: linear-gradient($background, $background), $gradient-3;
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        border: double 6px transparent;
+        border-radius: 18px;
+        z-index: -1;
+      }
+
+      &:nth-child(2n) {
+        transform: translateY(114px);
+
+        &::before {
+          right: auto;
+          left: -40px;
+          transform: translate(-100%, -50%) rotate(180deg);
+        }
+
+        &::after {
+          left: -16px;
+          right: auto;
+          background-image: linear-gradient($background, $background), $gradient-3-reversed;
+        }
+      }
+
+      .card {
+        @include card;
+        max-width: 475px;
+        padding: 24px;
+        border-radius: 8px;
+
+        h4 {
+          margin: 0 0 16px;
+        }
+
+        h3 {
+          margin: 0 0 16px;
+        }
+
+        p {
+          color: $primary-40;
+        }
+      }
+    }
+  }
+}

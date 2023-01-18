@@ -1,7 +1,13 @@
 import Head from 'next/head';
 import Footer from '@components/Footer';
 import Header from '@components/Header';
+import AboutUs from '@sections/AboutUs';
 import ContactUs from '@sections/ContactUs';
+import FAQ from '@sections/FAQ';
+import Gallery from '@sections/Gallery';
+import Hero from '@sections/Hero';
+import Steps from '@sections/Steps';
+import Technologies from '@sections/Technologies';
 import styles from 'styles/Home.module.scss';
 
 export default function Home() {
@@ -15,6 +21,12 @@ export default function Home() {
       </Head>
       <Header />
       <main className={styles.main}>
+        <Hero />
+        <AboutUs />
+        <Technologies />
+        <Steps />
+        <FAQ />
+        <Gallery />
         <ContactUs />
       </main>
       <Footer />

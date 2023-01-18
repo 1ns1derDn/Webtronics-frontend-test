@@ -1,0 +1,43 @@
+@import 'styles/common';
+
+.faq {
+  margin: 0 0 180px;
+
+  h2 {
+    margin: 0 0 56px;
+    text-align: center;
+  }
+
+  .content {
+    display: flex;
+    gap: 24px;
+
+    .left {
+      max-width: 496px;
+      width: 100%;
+
+      p {
+        margin: 0 0 56px;
+
+        span {
+          display: block;
+        }
+      }
+
+      .iconContainer {
+        position: relative;
+        width: 344px;
+        height: 405px;
+        margin: 0 auto;
+
+        svg {
+          position: absolute;
+          left: -990px;
+          top: -990px;
+          z-index: -1;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}

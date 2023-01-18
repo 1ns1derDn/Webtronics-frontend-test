@@ -1,0 +1,30 @@
+@import 'styles/common';
+
+.hero {
+  max-width: 1177px;
+  margin: 0 0 190px;
+
+  .layerOne {
+    display: flex;
+    margin: 0 0 -24px;
+
+    p {
+      max-width: 338px;
+      margin: 74px 0 0 57px;
+    }
+  }
+
+  .layerTwo {
+    display: flex;
+    align-items: center;
+    margin: -8px;
+
+    button {
+      margin: 0 24px 0 0;
+    }
+  }
+
+  h3 {
+    text-align: right;
+  }
+}

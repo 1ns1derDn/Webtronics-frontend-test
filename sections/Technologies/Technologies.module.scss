@@ -1,0 +1,36 @@
+@import 'styles/common';
+
+.technologies {
+  margin: 0 0 184px;
+
+  h2 {
+    max-width: 543px;
+    margin: 0 auto 16px;
+    text-align: center;
+  }
+
+  .subtitle {
+    max-width: 432px;
+    margin: 0 auto 54px;
+    text-align: center;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    li {
+      padding: 24px 10px;
+      background: url(/decorations/technology-card-background.svg) no-repeat center;
+
+      .image {
+        margin: 0 0 16px;
+      }
+
+      h4 {
+        text-align: center;
+      }
+    }
+  }
+}

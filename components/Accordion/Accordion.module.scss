@@ -1,0 +1,59 @@
+@import 'styles/common';
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  li {
+    @include card-clip(32px);
+    position: relative;
+    padding: 16.5px 24px;
+    border-radius: 8px;
+    transition: 0.3s;
+
+    h4 {
+      margin: 0;
+      transition: 0.3s;
+    }
+
+    p {
+      position: relative;
+      max-width: 606px;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    button {
+      position: absolute;
+      top: 16.5px;
+      right: 16px;
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    &.active {
+      padding: 27.5px 24px;
+
+      h4 {
+        margin: 0 0 16px;
+      }
+
+      p {
+        opacity: 100%;
+        height: auto;
+      }
+
+      button {
+        top: 24px;
+      }
+    }
+
+
+  }
+}

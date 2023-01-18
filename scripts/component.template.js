@@ -1,5 +1,5 @@
 const componentTemplate = (name) => `import { FC } from 'react';
-import styles from './${name}.module.scss'; 
+import styles from './${name}.module.scss';
  
 interface Props {
 

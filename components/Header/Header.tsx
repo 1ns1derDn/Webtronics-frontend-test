@@ -36,7 +36,7 @@ const Header = () => {
       <nav>
         <ul>
           <li className={styles.brand}>
-            <Link href="/">
+            <Link href="/" aria-label="Home">
               <Logo />
             </Link>
           </li>

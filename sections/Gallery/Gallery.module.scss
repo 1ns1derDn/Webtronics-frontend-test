@@ -1,0 +1,45 @@
+@import 'styles/common';
+
+.gallery {
+  margin: 0 0 181px;
+
+  h2 {
+    margin: 0 0 48px;
+    text-align: center;
+  }
+
+  .content {
+    display: flex;
+    gap: 24px;
+
+    .leftSide {
+      max-width: 288px;
+
+      p {
+        margin: 46px 0 84px;
+      }
+    }
+
+    .middle {
+      .top {
+        display: flex;
+        gap: 24px;
+        margin: 0 0 139px;
+
+        .rightSide {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+        }
+      }
+
+      p {
+        max-width: 868px;
+      }
+    }
+
+    .image {
+      border-radius: 16px;
+    }
+  }
+}

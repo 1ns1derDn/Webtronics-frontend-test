@@ -10,6 +10,7 @@ import styles from './Footer.module.scss';
 type NavbarLink = {
   title: ReactNode;
   to: string;
+  label?: string;
 };
 
 const companyLinks: NavbarLink[] = [
@@ -39,18 +40,22 @@ const socialLinks: NavbarLink[] = [
   {
     title: <FacebookLogo />,
     to: '/facebook',
+    label: 'Facebook',
   },
   {
     title: <GitlabLogo />,
     to: '/gitlab',
+    label: 'Gitlab',
   },
   {
     title: <TwitterLogo />,
     to: '/twitter',
+    label: 'Twitter',
   },
   {
     title: <LinkedInLogo />,
     to: '/linkedin',
+    label: 'LinkedIn',
   },
 ];
 
@@ -83,7 +88,11 @@ const Footer = () => {
           <ul>
             {socialLinks.map((link) => (
               <li key={link.to}>
-                <Link className={styles.link} href={link.to}>
+                <Link
+                  className={styles.link}
+                  href={link.to}
+                  aria-label={link.label}
+                >
                   {link.title}
                 </Link>
               </li>
