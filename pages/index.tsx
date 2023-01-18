@@ -6,6 +6,7 @@ import ContactUs from '@sections/ContactUs';
 import FAQ from '@sections/FAQ';
 import Gallery from '@sections/Gallery';
 import Hero from '@sections/Hero';
+import Review from '@sections/Review';
 import Steps from '@sections/Steps';
 import Technologies from '@sections/Technologies';
 import styles from 'styles/Home.module.scss';
@@ -26,6 +27,7 @@ export default function Home() {
         <Technologies />
         <Steps />
         <FAQ />
+        <Review />
         <Gallery />
         <ContactUs />
       </main>

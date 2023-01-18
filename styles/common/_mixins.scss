@@ -66,12 +66,15 @@
   }
 }
 
-@mixin card-clip($radius) {
-  $path: polygon($radius 0, 100% 0, 100% calc(100% - $radius), calc(100% - $radius) 100%, 0 100%, 0 $radius);
+@mixin clip-polygon($radius-top-left, $radius-bottom-right: $radius-top-left) {
+  clip-path: polygon($radius-top-left 0, 100% 0, 100% calc(100% - $radius-bottom-right), calc(100% - $radius-bottom-right) 100%, 0 100%, 0 $radius-top-left);
+}
+
+@mixin card-clip($radius-top-left, $radius-bottom-right: $radius-top-left) {
   @include card;
-  clip-path: $path;
+  @include clip-polygon($radius-top-left, $radius-bottom-right);
 
   &::before {
-    clip-path: $path;
+    @include clip-polygon($radius-top-left, $radius-bottom-right);
   }
 }

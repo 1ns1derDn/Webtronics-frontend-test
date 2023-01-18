@@ -1,0 +1,98 @@
+@import 'styles/common';
+
+.carousel {
+  display: flex;
+  gap: 24px;
+
+  .left {
+    max-width: 392px;
+    margin: 124px 0 0;
+
+    h4 {
+      margin: 0 0 17px;
+    }
+  }
+
+  .right {
+    width: 100%;
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 0 16px;
+
+      .counter {
+        h4 {
+          display: flex;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 120%;
+
+          span {
+            margin: 0 0 0 8px;
+            font-size: 16px;
+            line-height: 120%;
+          }
+        }
+      }
+
+      .controls {
+        display: flex;
+        gap: 24px;
+
+        button {
+          @include card;
+          display: flex;
+          align-items: center;
+          padding: 10.5px 16px 10.5px 14.5px;
+          border: none;
+          border-radius: 8px;
+          outline: none;
+          cursor: pointer;
+
+          &:last-child {
+            padding: 10.5px 14.5px 10.5px 16px;
+
+            svg {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+
+    .images {
+      display: flex;
+      gap: 24px;
+
+      li {
+        width: 392px;
+        height: 422px;
+        padding: 1px;
+        background: $gradient-1;
+
+        &, .imageContainer {
+          @include clip-polygon(0, 72px);
+          border-radius: 16px;
+        }
+
+        .imageContainer {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+
+        &:not(:first-child) {
+          width: 184px;
+
+          &, .imageContainer {
+            @include clip-polygon(0, 36px);
+          }
+        }
+      }
+    }
+  }
+}
