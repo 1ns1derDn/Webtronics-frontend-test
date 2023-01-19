@@ -20,18 +20,20 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <main className={styles.main}>
-        <Hero />
-        <AboutUs />
-        <Technologies />
-        <Steps />
-        <FAQ />
-        <Review />
-        <Gallery />
-        <ContactUs />
-      </main>
-      <Footer />
+      <div className={styles.homePage}>
+        <Header />
+        <main className={styles.main}>
+          <Hero />
+          <AboutUs />
+          <Technologies />
+          <Steps />
+          <FAQ />
+          <Review />
+          <Gallery />
+          <ContactUs />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

@@ -1,7 +1,23 @@
 @import 'styles/common';
 
 .technologies {
+  position: relative;
   margin: 0 0 184px;
+
+  &::before {
+    @include spotlight-background(303px, null, null, -72px);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -99px;
+    right: -34px;
+    width: 270px;
+    height: 125px;
+    background: url(/decorations/technologies-stars.png) no-repeat;
+    pointer-events: none;
+  }
 
   h2 {
     max-width: 543px;
@@ -23,6 +39,7 @@
     li {
       padding: 24px 10px;
       background: url(/decorations/technology-card-background.svg) no-repeat center;
+      backdrop-filter: blur(5px);
 
       .image {
         margin: 0 0 16px;

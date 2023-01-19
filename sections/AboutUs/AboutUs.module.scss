@@ -1,7 +1,23 @@
 @import 'styles/common';
 
 .aboutUs {
+  position: relative;
   margin: 0 0 179px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -145px;
+    left: -12px;
+    width: 1498px;
+    height: 756px;
+    background: url(/decorations/about-us-stars.png) no-repeat;
+    pointer-events: none;
+  }
+
+  &::after {
+    @include spotlight-background(null, -252px, -108px);
+  }
 
   h2 {
     margin: 0 0 56px;

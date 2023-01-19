@@ -1,7 +1,23 @@
 @import 'styles/common';
 
 .faq {
+  position: relative;
   margin: 0 0 180px;
+
+  &::before {
+    @include spotlight-background(56px, -206px);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 657px;
+    left: 89px;
+    width: 775px;
+    height: 69px;
+    background: url(/decorations/faq-stars.png) no-repeat;
+    pointer-events: none;
+  }
 
   h2 {
     max-width: 650px;
@@ -31,10 +47,10 @@
         height: 405px;
         margin: 0 auto;
 
-        svg {
+        .image {
           position: absolute;
-          left: -990px;
-          top: -990px;
+          top: -154px;
+          left: -206px;
           z-index: -1;
           pointer-events: none;
         }

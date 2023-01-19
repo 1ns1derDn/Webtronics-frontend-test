@@ -1,10 +1,31 @@
 @import 'styles/common';
 
 .review {
+  position: relative;
   margin: 0 0 180px;
 
+  &::before {
+    @include spotlight-background(-161px, null, null, -65px);
+  }
+
+  &::after {
+    @include spotlight-background(168px, -242px);
+  }
+
   h2 {
+    position: relative;
     margin: 0 0 48px;
     text-align: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 295px;
+      right: -107px;
+      width: 30px;
+      height: 33px;
+      background: url(/decorations/review-stars.png) no-repeat;
+      pointer-events: none;
+    }
   }
 }

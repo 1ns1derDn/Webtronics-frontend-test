@@ -1,7 +1,23 @@
 @import 'styles/common';
 
 .steps {
+  position: relative;
   margin: 0 0 180px;
+
+  &::before {
+    @include spotlight-background(432px, null, null, -77px);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 36px;
+    width: 1244px;
+    height: 896px;
+    background: url(/decorations/steps-stars.png) no-repeat;
+    pointer-events: none;
+  }
 
   h2 {
     margin: 0 0 56px;
@@ -52,7 +68,7 @@
         background-clip: padding-box, border-box;
         border: double 6px transparent;
         border-radius: 18px;
-        z-index: -1;
+        z-index: -2;
       }
 
       &:nth-child(2n) {

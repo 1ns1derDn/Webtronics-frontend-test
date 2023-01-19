@@ -1,7 +1,23 @@
 @import 'styles/common';
 
 .gallery {
+  position: relative;
   margin: 0 0 181px;
+
+  &::before {
+    @include spotlight-background(443px, null, null, -107px);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -105px;
+    left: 218px;
+    width: 737px;
+    height: 268px;
+    background: url(/decorations/gallery-stars.png) no-repeat;
+    pointer-events: none;
+  }
 
   h2 {
     margin: 0 0 48px;
