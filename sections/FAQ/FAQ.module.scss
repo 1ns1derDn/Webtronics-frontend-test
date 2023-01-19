@@ -22,6 +22,7 @@
   }
 
   h2 {
+    @include section-scroll-margin;
     max-width: 650px;
     margin: 0 auto 56px;
     text-align: center;

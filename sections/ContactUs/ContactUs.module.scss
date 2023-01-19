@@ -18,6 +18,7 @@
     width: 100%;
 
     h2 {
+      @include section-scroll-margin;
       margin: 0 0 16px;
       text-align: center;
     }

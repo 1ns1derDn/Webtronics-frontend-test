@@ -121,3 +121,7 @@
   background: url(/decorations/spotlight.png) no-repeat;
   pointer-events: none;
 }
+
+@mixin section-scroll-margin {
+  scroll-margin: 128px 0 0;
+}

@@ -13,6 +13,7 @@
   }
 
   h2 {
+    @include section-scroll-margin;
     position: relative;
     margin: 0 0 48px;
     text-align: center;
