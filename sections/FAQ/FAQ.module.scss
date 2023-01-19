@@ -6,6 +6,8 @@
 
   &::before {
     @include spotlight-background(56px, -206px);
+    z-index: 1;
+    mix-blend-mode: lighten;
   }
 
   &::after {

@@ -40,6 +40,9 @@
       padding: 24px 10px;
       background: url(/decorations/technology-card-background.svg) no-repeat center;
       backdrop-filter: blur(5px);
+      border-radius: 16px;
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 51px) 100%, 0 100%);
+      overflow: hidden;
 
       .image {
         margin: 0 0 16px;

@@ -2,40 +2,40 @@
 @import "reset";
 
 html, body, #__next {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    background: $background;
+  background: $background;
 }
 
 html {
-    font-size: 16px;
-    color: $white;
-    scroll-behavior:smooth;
-    color-scheme: dark;
+  font-size: 16px;
+  color: $white;
+  scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 h1 {
-    @include heading-1;
+  @include heading-1;
 }
 
 h2 {
-    @include heading-2;
+  @include heading-2;
 }
 
 h3 {
-    @include heading-3;
+  @include heading-3;
 }
 
 h4 {
-    @include heading-4;
+  @include heading-4;
 }
 
 p {
-    @include paragraph-1;
+  @include paragraph-1;
 }
 
 small {
-    @include paragraph-2;
+  @include paragraph-2;
 }

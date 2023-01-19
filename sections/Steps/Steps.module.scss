@@ -6,6 +6,8 @@
 
   &::before {
     @include spotlight-background(432px, null, null, -77px);
+    z-index: 1;
+    mix-blend-mode: lighten;
   }
 
   &::after {
@@ -48,17 +50,6 @@
       &::before {
         content: '';
         position: absolute;
-        top: 50%;
-        right: -40px;
-        transform: translate(100%, -50%);
-        width: 104px;
-        height: 24px;
-        background: url(/decorations/step-card-arrow.svg) no-repeat;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
         top: -18.5px;
         bottom: -18.5px;
         right: -16px;
@@ -71,19 +62,30 @@
         z-index: -2;
       }
 
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -40px;
+        transform: translate(100%, -50%);
+        width: 104px;
+        height: 24px;
+        background: url(/decorations/step-card-arrow.svg) no-repeat;
+      }
+
       &:nth-child(2n) {
         transform: translateY(114px);
 
         &::before {
-          right: auto;
-          left: -40px;
-          transform: translate(-100%, -50%) rotate(180deg);
-        }
-
-        &::after {
           left: -16px;
           right: auto;
           background-image: linear-gradient($background, $background), $gradient-3-reversed;
+        }
+
+        &::after {
+          right: auto;
+          left: -40px;
+          transform: translate(-100%, -50%) rotate(180deg);
         }
       }
 

@@ -66,13 +66,36 @@
   }
 }
 
+@mixin card-without-blur {
+  position: relative;
+  backdrop-filter: blur(5px);
+  background: $gradient-1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    z-index: -1;
+    background: linear-gradient($white-05, $white-05), linear-gradient($background, $background);
+    border-radius: inherit;
+  }
+}
+
+
 @mixin clip-polygon($radius-top-left, $radius-bottom-right: $radius-top-left) {
   clip-path: polygon($radius-top-left 0, 100% 0, 100% calc(100% - $radius-bottom-right), calc(100% - $radius-bottom-right) 100%, 0 100%, 0 $radius-top-left);
 }
 
 @mixin card-clip($radius-top-left, $radius-bottom-right: $radius-top-left) {
-  @include card;
-  clip-path: polygon($radius-top-left 0px, 100% 0, 100% calc(100% - $radius-bottom-right), calc(100% - $radius-bottom-right) 100%, 0 100%, 0 $radius-top-left);
+  @include card-without-blur;
+  @include clip-polygon($radius-top-left, $radius-bottom-right);
+
+  &::before {
+    @include clip-polygon($radius-top-left, $radius-bottom-right);
+  }
 }
 
 @mixin spotlight-background($top: null, $right: null, $bottom: null, $left: null) {
@@ -96,4 +119,5 @@
   width: 1056px;
   height: 1056px;
   background: url(/decorations/spotlight.png) no-repeat;
+  pointer-events: none;
 }
