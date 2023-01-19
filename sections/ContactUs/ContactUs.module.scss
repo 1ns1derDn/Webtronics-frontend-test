@@ -38,4 +38,9 @@
   .button {
     width: 100%;
   }
+
+  .globalError {
+    margin: 8px 0 0;
+    color: $error;
+  }
 }

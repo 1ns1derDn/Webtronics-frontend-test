@@ -1,4 +1,5 @@
 import { yupResolver } from '@hookform/resolvers/yup';
+import { AxiosError } from 'axios';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
@@ -36,13 +37,15 @@ const ContactUs = () => {
     resolver: yupResolver(schema),
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [globalError, setGlobalError] = useState('');
 
   const onSubmit = handleSubmit(async (data) => {
     try {
       await setIsLoading(true);
+      setGlobalError('');
       await http.post('feedback', data);
     } catch (error) {
-      console.log(error);
+      setGlobalError((error as AxiosError).message);
     } finally {
       setIsLoading(false);
     }
@@ -78,6 +81,7 @@ const ContactUs = () => {
           <Button className={styles.button} type="submit" disabled={isLoading}>
             Send
           </Button>
+          {globalError && <p className={styles.globalError}>{globalError}</p>}
         </form>
       </div>
     </section>
