@@ -33,15 +33,25 @@
     gap: 24px;
 
     .left {
+      position: relative;
       max-width: 496px;
       width: 100%;
+      margin: 0 0 56px;
 
-      p {
-        margin: 0 0 56px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: -55px;
+        left: -130px;
+        z-index: 1;
+        width: 752px;
+        height: 760px;
+        background: url(/decorations/question-mark.png) no-repeat;
+        pointer-events: none;
+      }
 
-        span {
-          display: block;
-        }
+      span {
+        display: block;
       }
 
       .iconContainer {

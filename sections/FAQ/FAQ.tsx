@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import questionMark from '@assets/decorations/question-mark.png';
 import Accordion from '@components/Accordion';
 import styles from './FAQ.module.scss';
 
@@ -41,14 +39,9 @@ const FAQ = () => {
     <section className={styles.faq}>
       <h2 id="faq">Frequently Asked Questions</h2>
       <div className={styles.content}>
-        <div className={styles.left}>
-          <p>
-            Do you have any kind of questions? <span>We are here to help.</span>
-          </p>
-          <div className={styles.iconContainer}>
-            <Image className={styles.image} src={questionMark} alt="" />
-          </div>
-        </div>
+        <p className={styles.left}>
+          Do you have any kind of questions? <span>We are here to help.</span>
+        </p>
         <Accordion items={items} />
       </div>
     </section>
