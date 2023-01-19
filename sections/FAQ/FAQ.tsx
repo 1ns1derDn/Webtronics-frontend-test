@@ -39,7 +39,7 @@ const items: FAQItem[] = [
 const FAQ = () => {
   return (
     <section className={styles.faq}>
-      <h2>Frequently Asked Questions</h2>
+      <h2 id="faq">Frequently Asked Questions</h2>
       <div className={styles.content}>
         <div className={styles.left}>
           <p>

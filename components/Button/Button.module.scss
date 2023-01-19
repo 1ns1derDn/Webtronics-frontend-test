@@ -1,6 +1,7 @@
 @import 'styles/common';
 
 .button {
+  display: block;
   padding: 24px 32px;
   font-family: $font-content;
   font-style: normal;
@@ -8,6 +9,7 @@
   font-size: 20px;
   line-height: 24px;
   color: $primary-100;
+  text-decoration: none;
   background: $gradient-2;
   border: none;
   border-radius: 8px;

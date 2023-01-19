@@ -16,23 +16,23 @@ type NavbarLink = {
 const companyLinks: NavbarLink[] = [
   {
     title: 'About Us',
-    to: '/about',
+    to: '#about',
   },
   {
     title: 'Steps',
-    to: '/steps',
+    to: '#steps',
   },
   {
     title: 'FAQs',
-    to: '/faq',
+    to: '#faq',
   },
   {
     title: 'Review',
-    to: '/review',
+    to: '#review',
   },
   {
     title: 'Gallery',
-    to: '/gallery',
+    to: '#gallery',
   },
 ];
 
@@ -76,7 +76,7 @@ const Footer = () => {
           <ul>
             {companyLinks.map((link) => (
               <li key={link.to}>
-                <Link className={styles.link} href={link.to}>
+                <Link className={styles.link} href={link.to} scroll={false}>
                   {link.title}
                 </Link>
               </li>

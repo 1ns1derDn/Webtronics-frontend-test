@@ -1,17 +1,28 @@
 import cn from 'classnames';
-import { ButtonHTMLAttributes } from 'react';
-import { FCWithChildren } from 'types/react';
+import Link from 'next/link';
+import { ButtonHTMLAttributes, ComponentProps, FC } from 'react';
 import styles from './Button.module.scss';
 
-const Button: FCWithChildren<ButtonHTMLAttributes<HTMLButtonElement>> = ({
+type Props =
+  | ({
+      isLink?: false;
+    } & ButtonHTMLAttributes<HTMLButtonElement>)
+  | ({
+      isLink: true;
+    } & ComponentProps<typeof Link>);
+
+const Button: FC<Props> = ({
+  isLink = false,
   className,
   children,
   ...props
 }) => {
+  const Component: any = isLink ? Link : 'button';
+
   return (
-    <button className={cn(className, styles.button)} {...props}>
+    <Component className={cn(className, styles.button)} {...props}>
       {children}
-    </button>
+    </Component>
   );
 };
 

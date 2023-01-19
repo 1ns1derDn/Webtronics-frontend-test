@@ -41,7 +41,7 @@ const steps: Step[] = [
 const Steps = () => {
   return (
     <section className={styles.steps}>
-      <h2>Steps</h2>
+      <h2 id="steps">Steps</h2>
       <ul>
         {steps.map((step, index) => (
           <li key={index}>

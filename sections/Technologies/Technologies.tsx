@@ -32,7 +32,7 @@ const technologies: Technology[] = [
 const Technologies = () => {
   return (
     <section className={styles.technologies}>
-      <h2>Programming technologies</h2>
+      <h2 id="technologies">Programming technologies</h2>
       <p className={styles.subtitle}>
         By the end, you’ll have the portfolio and interview skills you need to
         start your new career.

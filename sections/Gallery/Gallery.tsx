@@ -8,7 +8,7 @@ import styles from './Gallery.module.scss';
 const Gallery = () => {
   return (
     <section className={styles.gallery}>
-      <h2>Gallery</h2>
+      <h2 id="gallery">Gallery</h2>
       <div className={styles.content}>
         <div className={styles.leftSide}>
           <p>

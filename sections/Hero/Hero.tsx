@@ -12,7 +12,9 @@ const Hero = () => {
         </p>
       </div>
       <div className={styles.layerTwo}>
-        <Button>Start my career change</Button>
+        <Button className={styles.link} isLink href="#contact" scroll={false}>
+          Start my career change
+        </Button>
         <h1>Developer</h1>
       </div>
       <h3>Courses</h3>

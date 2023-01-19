@@ -31,7 +31,7 @@ const mentors: Mentor[] = [
 const AboutUs = () => {
   return (
     <section className={styles.aboutUs}>
-      <h2>About Us</h2>
+      <h2 id="about">About Us</h2>
       <div className={styles.row}>
         <div className={styles.graph}>
           <h3>Mentors</h3>

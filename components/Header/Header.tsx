@@ -10,23 +10,23 @@ type NavbarLink = {
 const links: NavbarLink[] = [
   {
     title: 'About',
-    to: '/about',
+    to: '#about',
   },
   {
     title: 'Programs',
-    to: '/programs',
+    to: '#technologies',
   },
   {
     title: 'Steps',
-    to: '/steps',
+    to: '#steps',
   },
   {
     title: 'Questions',
-    to: '/questions',
+    to: '#faq',
   },
   {
     title: 'Get in touch',
-    to: '/contact',
+    to: '#contact',
   },
 ];
 
@@ -42,7 +42,7 @@ const Header = () => {
           </li>
           {links.map((link) => (
             <li key={link.to}>
-              <Link className={styles.link} href={link.to}>
+              <Link className={styles.link} href={link.to} scroll={false}>
                 {link.title}
               </Link>
             </li>

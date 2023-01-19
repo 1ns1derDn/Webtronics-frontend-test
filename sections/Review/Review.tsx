@@ -32,7 +32,7 @@ const reviews: ReviewItem[] = [
 const Review = () => {
   return (
     <section className={styles.review}>
-      <h2>Review</h2>
+      <h2 id="review">Review</h2>
       <Carousel items={reviews} />
     </section>
   );

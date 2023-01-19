@@ -3,6 +3,7 @@
 .inputText {
   @include card;
   border-radius: 8px;
+  transition: 0.15s;
 
   &.error {
     background: $error-20;
@@ -31,9 +32,10 @@
     width: 100%;
     padding: 24px;
     color: $primary-40;
-    background: $white-05;
+    background: none;
     border: none;
     outline: none;
+    transition: 0.1s;
 
     &:focus {
       color: $white;
