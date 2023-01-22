@@ -1,0 +1,31 @@
+@import '../general/vars';
+@import '../general/mixins';
+
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 38px 350px 0 350px;
+  @include flex($justify: space-between);
+}
+
+.logo {
+  width: 169px;
+  height: 33px;
+}
+
+.nav {
+  width: 525px;
+  height: 26px;
+  @include flex($justify: space-between, $align: center);
+}
+
+.link {
+  text-align: center;
+  color: $color-clean;
+  text-decoration: none;
+  align-self: center;
+
+  &:hover {
+    font-weight: 600;
+  }
+}
