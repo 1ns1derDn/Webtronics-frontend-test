@@ -4,3 +4,12 @@
   width: 100%;
   background-color: $color-bg;
 }
+
+.bgImg {
+  position: absolute;
+  width: 100vw;
+  height: 815px;
+  background-image: linear-gradient(180deg, rgba(12, 16, 45, 0) -4.71%, #0c102d 97.38%), url('../../public/assets/img/bg-img.jpg');
+  background-position: top;
+  opacity: 45%;
+}

@@ -14,6 +14,7 @@ import Steps from "./Steps";
 export default function Landing(): JSX.Element {
   return (
     <main className={styles.landing}>
+      <div className={styles.bgImg}></div>
       <Header />
       <Showcase />
       <About />

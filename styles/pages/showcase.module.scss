@@ -1,0 +1,49 @@
+@import '../general/vars';
+@import '../general/mixins';
+
+.showcase {
+  height: 600px;
+  background-color: transparent;
+}
+
+.wrapper {
+  position: relative;
+  top: 187px;
+  left: -10px;
+  width: 1190px;
+  height: 365px;
+  margin: auto;
+}
+
+.heading {
+  width: 1088px;
+  @include flex($direction: column, $justify: space-between);
+  color: $color-clean;
+
+  .secondH1Word {
+    width: 100%;
+    margin-top: -25px;
+    text-align: end;
+  }
+}
+
+.description {
+  position: absolute;
+  top: 74px;
+  right: 0;
+  width: 360px;
+  color: $color-clean;
+}
+
+.subheading {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  color: $color-clean;
+}
+
+.btn {
+  position: absolute;
+  bottom: 82px;
+  left: -7px;
+}
