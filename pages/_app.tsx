@@ -1,4 +1,4 @@
-import '../styles/general/reset.scss'
+import '../styles/general/bandle.scss'
 import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
