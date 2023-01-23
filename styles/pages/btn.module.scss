@@ -3,9 +3,23 @@
 
 .btn {
   font-family: $font-p;
+  color: $color-primary-100;
   background: $gradient-2;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-primary-80;
+  }
+
+  &:active {
+    color: $color-clean;
+  }
+
+  &:disabled {
+    opacity: 40%;
+  }
 }

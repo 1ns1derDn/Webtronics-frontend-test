@@ -2,8 +2,13 @@
   box-sizing: border-box;
 }
 
-html {
-  overflow-y: hidden;
+body {
+  height: $height-site;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
 }
 
 h1 {
