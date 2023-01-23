@@ -1,0 +1,39 @@
+@import '../general/vars';
+@import '../general/mixins';
+
+.questions {
+  position: relative;
+  width: 1223px;
+  margin: 0 auto 184px;
+  @include flex($direction: column);
+  z-index: 1;
+}
+
+.heading {
+  width: 642px;
+  margin-bottom: 54px;
+  align-self: center;
+  text-align: center;
+  color: $color-clean;
+}
+
+.wrapper {
+  @include flex($justify: space-between);
+}
+
+.question img {
+  position: absolute;
+  top: -662px;
+  left: -350px;
+}
+
+.description {
+  width: 280px;
+  align-self: center;
+  color: $color-clean;
+}
+
+.accordion {
+  @include flex($direction: column, $justify: space-between);
+  gap: 24px;
+}

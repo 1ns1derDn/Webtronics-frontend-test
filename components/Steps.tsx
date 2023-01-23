@@ -4,7 +4,7 @@ import Step from "./Step";
 
 export default function Steps(): JSX.Element {
   return (
-    <section className={styles.steps}>
+    <section id='steps' className={styles.steps}>
       <h2 className={styles.heading}>Steps</h2>
       <div className={styles.wrapper}>
         <div className={styles.side}>

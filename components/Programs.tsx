@@ -11,22 +11,22 @@ export default function Programs(): JSX.Element {
       </p>
       <div className={styles.wrapper}>
         <Program
-          class={''}
+          class=''
           src='./assets/img/program-01.png'
           heading='Angular'
         />
         <Program
-          class={''}
+          class=''
           src='./assets/img/program-02.png'
           heading='React'
         />
         <Program
-          class={''}
+          class=''
           src='./assets/img/program-03.png'
           heading='Vue.js'
         />
         <Program
-          class={''}
+          class=''
           src='./assets/img/program-04.png'
           heading='JavaScript'
         />
