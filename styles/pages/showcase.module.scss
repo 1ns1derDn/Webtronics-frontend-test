@@ -2,12 +2,13 @@
 @import '../general/mixins';
 
 .showcase {
-  height: 600px;
+  padding-top: 187px;
+  padding-bottom: 190px;
+  z-index: 1;
 }
 
 .wrapper {
   position: relative;
-  top: 187px;
   left: -10px;
   width: 1190px;
   height: 365px;

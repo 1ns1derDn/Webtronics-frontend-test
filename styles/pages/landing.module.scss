@@ -1,15 +1,19 @@
 @import '../general/vars';
+@import '../general/mixins';
 
 .landing {
   width: 100%;
   height: $height-site;
+  @include flex($direction: column);
   background-color: $color-bg;
 }
 
 .bgImg {
   position: absolute;
+  top: 0;
   width: 100vw;
   height: 100%;
+  z-index: 0;
   background-image: linear-gradient(180deg, rgba(12, 16, 45, 0) -4.71%, #0c102d 97.38%), url('../../public/assets/img/bg-img.jpg');
   background-position: top;
   background-repeat: no-repeat;

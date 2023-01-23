@@ -3,9 +3,11 @@
 
 .header {
   position: fixed;
+  top: 0;
   width: 100%;
   padding: 38px 350px 0 350px;
   @include flex($justify: space-between);
+  z-index: 2;
 }
 
 .logo {

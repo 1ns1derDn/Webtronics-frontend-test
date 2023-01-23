@@ -1,0 +1,66 @@
+@import '../general/vars';
+@import '../general/mixins';
+
+.about {
+  position: relative;
+  left: 0;
+  width: 1231px;
+  margin: auto;
+  @include flex($direction: column);
+  z-index: 1;
+}
+
+.heading {
+  margin-bottom: 56px;
+  text-align: center;
+  color: $color-clean;
+}
+
+.content {
+  @include flex($justify: flex-start);
+  gap: 18px;
+}
+
+.mentorsTree {
+  position: relative;
+  width: 607px;
+  height: 483px;
+  @include flex($direction: column, $justify: flex-start);
+}
+
+.tree {
+  width: 394px;
+  height: 157px;
+  align-self: center;
+}
+
+.subheading {
+  margin-bottom: 11px;
+  text-align: center;
+  color: $color-clean;
+}
+
+.mentor01 {
+  position: absolute;
+  top: 206px;
+  left: 0;
+}
+
+.mentor02 {
+  position: absolute;
+  top: 155px;
+  left: 211px;
+}
+
+.mentor03 {
+  position: absolute;
+  top: 205px;
+  right: 0;
+}
+
+.description {
+  position: relative;
+  top: 109px;
+  width: 485px;
+  color: $color-clean;
+}
