@@ -3,9 +3,8 @@
 
 .about {
   position: relative;
-  left: 0;
   width: 1231px;
-  margin: auto;
+  margin: 0 auto 180px;
   @include flex($direction: column);
   z-index: 1;
 }
