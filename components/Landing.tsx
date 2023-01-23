@@ -1,5 +1,5 @@
 import React from "react";
-import styles from '../styles/pages/landing.module.scss'
+import styles from '../styles/pages/landing.module.scss';
 import About from "./About";
 import Footer from "./Footer";
 import Gallery from "./Gallery";

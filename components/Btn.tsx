@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/pages/btn.module.scss'
+import styles from '../styles/pages/btn.module.scss';
 
 export default function Btn(
   props: { class: string, text: string, width: number, heigth: number }

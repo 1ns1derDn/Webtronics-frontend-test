@@ -1,0 +1,57 @@
+@import '../general/vars';
+@import '../general/mixins';
+
+.wrapper {
+  position: relative;
+  width: 491px;
+  height: 228px;
+  @include flex();
+}
+
+.border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.borderLeft {
+  background: url(../../../assets/svg/stroke-left.svg),
+    url(../../../assets/svg/step-frame.svg);
+  background-repeat: no-repeat;
+  background-position: top right, center left;
+}
+
+.borderRight {
+  background: url(../../../assets/svg/stroke-right.svg),
+    url(../../../assets/svg/step-frame.svg);
+  background-repeat: no-repeat;
+  background-position: top left, center right;
+}
+
+.description {
+  width: 100%;
+}
+
+.descriptionLeft {
+  padding: 42.5px 42.5px 0 24px;
+}
+
+.descriptionRight {
+  padding: 42.5px 24px 0 42.5px;
+}
+
+.step {
+  color: $color-clean;
+}
+
+.heading {
+  margin: 16px 0;
+  color: $color-clean;
+}
+
+.text {
+  width: 410px;
+  color: $color-text-40;
+}
