@@ -14,8 +14,17 @@
   width: 100vw;
   height: 100%;
   z-index: 0;
-  background-image: linear-gradient(180deg, rgba(12, 16, 45, 0) -4.71%, #0c102d 97.38%), url('../../public/assets/img/bg-img.jpg');
-  background-position: top;
+  background: url('../../public/assets/img/shining.png'), url('../../public/assets/img/shining.png'),
+    url('../../public/assets/img/shining.png'), url('../../public/assets/img/shining.png'),
+    url('../../public/assets/img/shining.png'), url('../../public/assets/img/shining.png'),
+    url('../../public/assets/img/shining.png'), url('../../public/assets/img/shining.png'),
+    url('../../public/assets/img/shining.png'), url('../../public/assets/img/shining.png'),
+    url('../../public/assets/img/bg-img.png'), url('../../public/assets/svg/front.svg');
+  background-position: left 30px top 100px, right -200px top 80px,
+    left -70px top 1520px, right -70px top 1000px,
+    left -70px top 2300px, right 10px top 3370px,
+    left -90px top 4100px, right -70px top 4400px,
+    left -60px top 5500px, right -20px top 5830px,
+    top center, right 95px top 1165px;
   background-repeat: no-repeat;
-  opacity: 45%;
 }
