@@ -8,7 +8,7 @@ export default function Mentor(
     <div className={`${styles.wrapper} ${props.class}`}>
       <div className={styles.border}>
         <div className={styles.imgWrapper}>
-          <img src={props.src} alt='mentoor' />
+          <img src={props.src} alt='mentor' />
         </div>
       </div>
       <div className={styles.descrioption}>

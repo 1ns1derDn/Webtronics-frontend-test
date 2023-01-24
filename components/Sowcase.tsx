@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../styles/pages/showcase.module.scss';
+import { BtnTypes } from '../types/types';
 import Btn from './Btn';
 
 export default function Showcase(): JSX.Element {
@@ -17,6 +18,7 @@ export default function Showcase(): JSX.Element {
           text={'Start my career change'}
           width={288}
           heigth={74}
+          type={BtnTypes.BUTTON}
         />
       </div>
     </section>

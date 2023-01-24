@@ -1,0 +1,35 @@
+@import '../general/vars';
+@import '../general/mixins';
+
+.getInTouch {
+  position: relative;
+  width: 1226px;
+  margin: 0 auto 180px;
+  @include flex($direction: column);
+  z-index: 1;
+}
+
+.border {
+  width: 100%;
+  height: 600px;
+  padding: 56px 0;
+  @include flex($direction: column, $justify: space-between);
+  background: url(../../../assets/svg/contact-border.svg);
+
+  * {
+    align-self: center;
+  }
+}
+
+.heading {
+  margin-bottom: 16px;
+  align-self: center;
+  text-align: center;
+  color: $color-clean;
+}
+
+.description {
+  margin-bottom: 19px;
+  color: $color-clean;
+  text-align: center;
+}

@@ -4,7 +4,7 @@
 .gallery {
   position: relative;
   width: 1224px;
-  margin: 0 auto 180px;
+  margin: 0 auto 182px;
   @include flex($direction: column);
   z-index: 1;
 }
