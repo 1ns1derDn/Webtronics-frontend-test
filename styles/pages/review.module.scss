@@ -1,0 +1,78 @@
+@import '../general/vars';
+@import '../general/mixins';
+
+.review {
+  position: relative;
+  left: -18px;
+  width: 1224px;
+  margin: 0 auto 180px;
+  @include flex($direction: column);
+  z-index: 1;
+}
+
+.heading {
+  margin-bottom: 47px;
+  align-self: center;
+  text-align: center;
+  color: $color-clean;
+}
+
+.wrapper {
+  @include flex($justify: space-between);
+}
+
+.reviewContent {
+  padding-top: 125px;
+  @include flex($direction: column, $justify: flex-start);
+  gap: 17px;
+}
+
+.title {
+  color: $color-clean;
+}
+
+.text {
+  width: 392px;
+  color: $color-clean;
+}
+
+.carousel {
+  @include flex($direction: column);
+  gap: 16px;
+}
+
+.carouselPanel {
+  @include flex($justify: space-between);
+}
+
+.carouselCounter {
+  width: 36px;
+  margin-top: 5px;
+  @include flex($justify: space-between);
+  color: $color-clean;
+}
+
+.carouselControls {
+  @include flex($justify: space-between);
+  gap: 24px;
+
+  button {
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    border: none;
+  }
+
+  .leftBtn {
+    background: url(../../../assets/svg/carousel-left-btn.svg);
+  }
+
+  .rightBtn {
+    background: url(../../../assets/svg/carousel-right-btn.svg);
+  }
+}
+
+.carouselImgs {
+  @include flex($justify: space-between);
+  gap: 22px;
+}

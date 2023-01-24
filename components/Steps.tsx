@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import styles from '../styles/pages/steps.module.scss';
-import Step from "./Step";
+import Step from './Step';
 
 export default function Steps(): JSX.Element {
   return (

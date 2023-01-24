@@ -1,0 +1,65 @@
+@import '../general/vars';
+@import '../general/mixins';
+
+.wrapper {
+  position: relative;
+  height: 424px;
+}
+
+.wrapperOpened {
+  width: 394px;
+}
+
+.wrapperClosed {
+  width: 186px;
+}
+
+.border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.borderOpened {
+  background: url(../../../assets/svg/review-frame-opened.svg);
+  background-repeat: no-repeat;
+}
+
+.borderClosed {
+  background: url(../../../assets/svg/review-frame-closed.svg);
+  background-repeat: no-repeat;
+}
+
+.imgWrapper {
+  height: 420px;
+  @include flex();
+  z-index: 0;
+  align-self: center;
+
+  img {
+    height: 100%;
+  }
+}
+
+.imgWrapperOpened {
+  width: 390px;
+  mask-image: url(../../../assets/img/rewiew-mask-opened.png);
+
+  img {
+    mask-repeat: no-repeat;
+    mask-position: center bottom;
+  }
+}
+
+.imgWrapperClosed {
+  width: 182px;
+  mask-image: url(../../../assets/img/rewiew-mask-closed.png);
+
+  img {
+    mask-repeat: no-repeat;
+    mask-position: center bottom;
+  }
+}

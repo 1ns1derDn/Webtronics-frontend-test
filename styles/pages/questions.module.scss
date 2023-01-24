@@ -4,7 +4,7 @@
 .questions {
   position: relative;
   width: 1223px;
-  margin: 0 auto 184px;
+  margin: 0 auto 180px;
   @include flex($direction: column);
   z-index: 1;
 }

@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import styles from '../styles/pages/programs.module.scss';
-import Program from "./Program";
+import Program from './Program';
 
 export default function Programs(): JSX.Element {
   return (

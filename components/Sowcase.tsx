@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import styles from '../styles/pages/showcase.module.scss';
-import Btn from "./Btn";
+import Btn from './Btn';
 
 export default function Showcase(): JSX.Element {
   return (

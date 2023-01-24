@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import styles from '../styles/pages/questions.module.scss';
-import Question from "./Question";
+import Question from './Question';
 
 export default function Questions(): JSX.Element {
   return (
