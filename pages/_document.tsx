@@ -9,6 +9,11 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
         <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@700&display=swap" rel="stylesheet" />
         <link rel='icon' href='/favicon.ico' />
+        <meta property='og:type' content='website' />
+        <meta
+          property='og:title'
+          content='Webtronics | Frontend developer'
+        />
       </Head>
       <body>
         <Main />

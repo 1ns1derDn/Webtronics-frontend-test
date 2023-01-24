@@ -4,6 +4,7 @@ import * as yup from 'yup';
 import styles from '../styles/components/contact-form.module.scss';
 import Btn from './Btn';
 import { BtnTypes, FormValues } from '../types/types';
+import axios from 'axios';
 
 const phoneRegExp = new RegExp(/^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/)
 const validationSchema = yup.object().shape({
@@ -23,8 +24,23 @@ export default function ContactForm(): JSX.Element {
         email: '',
       }}
 
-      onSubmit={(values: FormValues) => {
-        console.log(values);
+      onSubmit={async (values: FormValues, { resetForm }) => {
+        try {
+          const response = await axios({
+            method: 'post',
+            url: 'http://localhost:3004/feedback',
+            data: {
+              name: values.name,
+              phone: values.phone,
+              email: values.email,
+            }
+          });
+          console.log(response);
+        } catch (error) {
+          alert(error);
+          console.error(error);
+        }
+        resetForm();
       }}
     >
       {({ errors, touched }) => {
