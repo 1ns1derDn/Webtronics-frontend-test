@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/pages/steps.module.scss';
+import styles from '../styles/components/steps.module.scss';
 import Step from './Step';
 
 export default function Steps(): JSX.Element {

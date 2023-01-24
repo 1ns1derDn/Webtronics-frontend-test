@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/pages/review.module.scss';
+import styles from '../styles/components/review.module.scss';
 import ReviewPhoto from './ReviewPhoto';
 
 export default function Review(): JSX.Element {

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/pages/header.module.scss';
+import styles from '../styles/components/header.module.scss';
 
 export default function Header(): JSX.Element {
   return (

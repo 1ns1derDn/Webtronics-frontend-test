@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import * as yup from 'yup';
-import styles from '../styles/pages/contact-form.module.scss';
+import styles from '../styles/components/contact-form.module.scss';
 import Btn from './Btn';
 import { BtnTypes, FormValues } from '../types/types';
 

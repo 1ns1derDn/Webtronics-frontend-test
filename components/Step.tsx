@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/pages/step.module.scss';
+import styles from '../styles/components/step.module.scss';
 
 export default function Step(
   props: { class: string, stepNumber: number, heading: string, text: string, isLeft: boolean }

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/pages/review-photo.module.scss';
+import styles from '../styles/components/review-photo.module.scss';
 
 export default function ReviewPhoto(
   props: { class: string, src: string, offset: number, isOpened: boolean }

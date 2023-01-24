@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/pages/get-in-touch.module.scss';
+import styles from '../styles/components/get-in-touch.module.scss';
 import ContactForm from './ContactForm';
 
 export default function GetInTouch(): JSX.Element {

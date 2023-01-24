@@ -1,0 +1,89 @@
+@import '../general/vars';
+@import '../general/mixins';
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 195px;
+  padding-top: 33px;
+  z-index: 1;
+  background: url(../../../assets/svg/footer-frame.svg);
+}
+
+.wrapper {
+  position: relative;
+  left: -112px;
+  width: 1000px;
+  margin: 0 auto;
+  @include flex($justify: space-between);
+}
+
+.logo {
+  width: 169px;
+  height: 33px;
+}
+
+.link {
+  text-align: center;
+  color: $color-clean;
+  text-decoration: none;
+  align-self: center;
+
+  &:hover {
+    font-weight: 600;
+  }
+}
+
+.copyright {
+  width: 236px;
+  @include flex($direction: column, $justify: flex-start);
+  gap: 24px;
+
+  p {
+    color: $color-clean;
+    line-height: 18px;
+  }
+}
+
+.company {
+  width: 255px;
+  height: 128px;
+  margin-left: 22px;
+  @include flex($direction: column, $justify: flex-start);
+  gap: 24px;
+
+  h5 {
+    color: $color-clean;
+  }
+}
+
+.links {
+  height: 90px;
+  @include flex($direction: column, $justify: flex-start, $align: flex-start);
+  align-content: space-between;
+  gap: 13px;
+  flex-wrap: wrap;
+
+  li {
+    align-self: flex-start;
+  }
+}
+
+.social {
+  @include flex($direction: column, $justify: flex-start);
+  gap: 24px;
+
+  h5 {
+    color: $color-clean;
+  }
+}
+
+.socialContainer {
+  width: 155px;
+  @include flex($justify: space-between);
+
+  img {
+    cursor: pointer;
+  }
+}

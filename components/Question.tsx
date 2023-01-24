@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/pages/question.module.scss';
+import styles from '../styles/components/question.module.scss';
 
 export default function Question(
   props: { class: string, question: string, answer: string, isOpened: boolean }

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/pages/showcase.module.scss';
+import styles from '../styles/components/showcase.module.scss';
 import { BtnTypes } from '../types/types';
 import Btn from './Btn';
 

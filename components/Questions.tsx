@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/pages/questions.module.scss';
+import styles from '../styles/components/questions.module.scss';
 import Question from './Question';
 
 export default function Questions(): JSX.Element {

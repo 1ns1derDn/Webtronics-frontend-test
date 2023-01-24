@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/pages/btn.module.scss';
+import styles from '../styles/components/btn.module.scss';
 import { BtnTypes } from '../types/types';
 
 export default function Btn(

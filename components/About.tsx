@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/pages/about.module.scss';
+import styles from '../styles/components/about.module.scss';
 import Mentor from './Mentor';
 
 export default function About(): JSX.Element {

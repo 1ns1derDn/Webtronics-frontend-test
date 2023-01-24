@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/pages/gallery.module.scss';
+import styles from '../styles/components/gallery.module.scss';
 
 export default function Gallery(): JSX.Element {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/pages/mentor.module.scss';
+import styles from '../styles/components/mentor.module.scss';
 
 export default function Mentor(
   props: { class: string, src: string, heading: string, text: string }

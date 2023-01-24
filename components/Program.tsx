@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/pages/program.module.scss';
+import styles from '../styles/components/program.module.scss';
 
 export default function Program(
   props: { class: string, src: string, heading: string }
