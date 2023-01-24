@@ -5,9 +5,11 @@ import styles from '../styles/components/contact-form.module.scss';
 import Btn from './Btn';
 import { BtnTypes, FormValues } from '../types/types';
 
+const phoneRegExp = new RegExp(/^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/)
 const validationSchema = yup.object().shape({
-  name: yup.string().required('Insert your name, please'),
-  phone: yup.string().required('Insert your phone number, please'),
+  name: yup.string().required('Insert your name, please').min(3, 'Too short name'),
+  phone: yup.string().required('Insert your phone number, please').min(5, 'Too short phone number')
+    .matches(phoneRegExp, 'invalid phone number'),
   email: yup.string().required('Insert your e-mail, please').email('Invalid e-mail address'),
 });
 
@@ -27,9 +29,21 @@ export default function ContactForm(): JSX.Element {
     >
       {({ errors, touched }) => {
         return <Form className={styles.form}>
-          <Field className={`${styles.input} p1`} name='name' type='text' placeholder='Name' />
-          <Field className={`${styles.input} p1`} name='phone' type='tel' placeholder='Phone' />
-          <Field className={`${styles.input} p1`} name='email' type='email' placeholder='E-mail' />
+          <label>
+            <Field className={`${(errors.name && touched.name) ? styles.inputError : styles.input} p1`}
+              name='name' type='text' placeholder='Name' />
+            {errors.name && touched.name && <div className={`${styles.errorDescription} p2`}>{errors.name}</div>}
+          </label>
+          <label>
+            <Field className={`${(errors.phone && touched.phone) ? styles.inputError : styles.input} p1`}
+              name='phone' type='text' placeholder='Phone' />
+            {errors.phone && touched.phone && <div className={`${styles.errorDescription} p2`}>{errors.phone}</div>}
+          </label>
+          <label>
+            <Field className={`${(errors.email && touched.email) ? styles.inputError : styles.input} p1`}
+              name='email' type='text' placeholder='E-mail' />
+            {errors.email && touched.email && <div className={`${styles.errorDescription} p2`}>{errors.email}</div>}
+          </label>
           <Btn
             class={styles.submitBtn}
             text='Send'
