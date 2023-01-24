@@ -8,7 +8,7 @@
   background-color: $color-bg;
 }
 
-.bgImg {
+.bgShiningImg {
   position: absolute;
   top: 0;
   width: 100vw;
@@ -27,4 +27,148 @@
     left -60px top 5500px, right -20px top 5830px,
     top center, right 95px top 1165px;
   background-repeat: no-repeat;
+
+  .star01 {
+    position: absolute;
+    top: 630px;
+    left: 410px;
+    transform: scale(50%);
+    filter: hue-rotate(-40deg);
+  }
+
+  .star02 {
+    position: absolute;
+    top: 573px;
+    left: 806px;
+    transform: scale(33%);
+    filter: hue-rotate(-40deg);
+  }
+
+  .star03 {
+    position: absolute;
+    top: 585px;
+    left: 1070px;
+    transform: scale(33%);
+    filter: hue-rotate(-40deg);
+  }
+
+  .star04 {
+    position: absolute;
+    top: 595px;
+    right: 85px;
+    transform: scale(100%);
+  }
+
+  .star05 {
+    position: absolute;
+    top: 975px;
+    left: 177px;
+    transform: scale(50%);
+    filter: brightness(6);
+  }
+
+  .star06 {
+    position: absolute;
+    top: 1133px;
+    left: 1040px;
+    transform: scale(33%);
+    filter: hue-rotate(-40deg);
+  }
+
+  .star07 {
+    position: absolute;
+    top: 1282px;
+    right: 402px;
+    transform: scale(35%);
+    filter: hue-rotate(-40deg);
+  }
+
+  .star08 {
+    position: absolute;
+    top: 1372px;
+    right: 165px;
+    transform: scale(100%);
+    filter: hue-rotate(-40deg);
+    opacity: 70%;
+  }
+
+  .star09 {
+    position: absolute;
+    top: 2512px;
+    left: 220px;
+    transform: scale(40%);
+    filter: hue-rotate(-40deg);
+  }
+
+  .star10 {
+    position: absolute;
+    top: 2534px;
+    right: 134px;
+    transform: scale(65%);
+    filter: hue-rotate(-40deg);
+  }
+
+  .star11 {
+    position: absolute;
+    top: 2690px;
+    right: 545px;
+    transform: scale(40%);
+    filter: hue-rotate(-40deg);
+  }
+
+  .star12 {
+    position: absolute;
+    top: 2920px;
+    right: 240px;
+    transform: scale(40%);
+    filter: hue-rotate(-40deg);
+  }
+
+  .star13 {
+    position: absolute;
+    top: 4162px;
+    left: 276px;
+    transform: scale(70%);
+    filter: hue-rotate(-30deg);
+  }
+
+  .star14 {
+    position: absolute;
+    top: 4208px;
+    right: 550px;
+    transform: scale(30%) rotate(-25deg);
+    filter: hue-rotate(-40deg);
+  }
+
+  .star14 {
+    position: absolute;
+    top: 4208px;
+    right: 550px;
+    transform: scale(30%) rotate(-25deg);
+    filter: hue-rotate(-40deg);
+  }
+
+  .star15 {
+    position: absolute;
+    top: 5867px;
+    right: 462px;
+    transform: scale(90%);
+    filter: hue-rotate(-30deg);
+  }
+
+  .star16 {
+    position: absolute;
+    top: 6013px;
+    right: 655px;
+    transform: scale(33%);
+    filter: hue-rotate(-40deg);
+  }
+
+  .star17 {
+    position: absolute;
+    top: 6108px;
+    left: 400px;
+    transform: scale(33%);
+    filter: hue-rotate(-40deg);
+  }
 }
