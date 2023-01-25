@@ -61,6 +61,11 @@
     height: 40px;
     background-repeat: no-repeat;
     border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    filter: brightness(10);
   }
 
   .leftBtn {

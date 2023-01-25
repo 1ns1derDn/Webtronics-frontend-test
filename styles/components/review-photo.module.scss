@@ -4,6 +4,7 @@
 .wrapper {
   position: relative;
   height: 424px;
+  cursor: pointer;
 }
 
 .wrapperOpened {
@@ -28,6 +29,10 @@
   background-repeat: no-repeat;
 }
 
+.wrapper:hover .border {
+  filter: brightness(10);
+}
+
 .borderClosed {
   background: url(../../../assets/svg/review-frame-closed.svg);
   background-repeat: no-repeat;
@@ -38,10 +43,6 @@
   @include flex();
   z-index: 0;
   align-self: center;
-
-  img {
-    height: 100%;
-  }
 }
 
 .imgWrapperOpened {
@@ -51,6 +52,7 @@
   img {
     mask-repeat: no-repeat;
     mask-position: center bottom;
+    object-fit: cover;
   }
 }
 

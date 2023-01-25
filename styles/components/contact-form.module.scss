@@ -6,6 +6,12 @@
   height: 338px;
   @include flex($direction: column, $justify: space-between);
 
+  label {
+    position: relative;
+    width: 100%;
+    height: 86px;
+  }
+
   input {
     width: 100%;
     height: 70px;
@@ -20,6 +26,11 @@
     background-repeat: no-repeat;
   }
 
+  .inputError {
+    background: url(../../../assets/svg/input-error.svg);
+    background-repeat: no-repeat;
+  }
+
   input::placeholder {
     color: $color-text-40;
   }
@@ -31,6 +42,13 @@
   input:focus {
     color: $color-clean;
     outline: none;
+  }
+
+  .errorDescription {
+    position: absolute;
+    bottom: 0;
+    align-self: flex-start;
+    color: $color-clean;
   }
 
   .submitBtn {
