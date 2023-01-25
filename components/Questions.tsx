@@ -1,8 +1,13 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { questionsData } from '../data/questionsData';
+import { RootState } from '../store/store';
 import styles from '../styles/components/questions.module.scss';
 import Question from './Question';
 
 export default function Questions(): JSX.Element {
+  const { openedQuestion } = useSelector((state: RootState) => state.questions);
+
   return (
     <section id='questions' className={styles.questions}>
       <h2 className={styles.heading}>Frequently Asked<br />Questions</h2>
@@ -15,40 +20,15 @@ export default function Questions(): JSX.Element {
         </div>
         <div className={styles.accordion}>
 
-          <Question
-            class=''
-            question='What is the price?'
-            answer={`Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too.`}
-            isOpened={true}
-          />
+          {questionsData.map((data) =>
+            <Question
+              id={data.id}
+              class={data.class}
+              question={data.question}
+              answer={data.answer}
+              isOpened={openedQuestion === data.id}
+            />)}
 
-          <Question
-            class=''
-            question='What is the price?'
-            answer={`Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too.`}
-            isOpened={false}
-          />
-
-          <Question
-            class=''
-            question='What is the price?'
-            answer={`Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too.`}
-            isOpened={false}
-          />
-
-          <Question
-            class=''
-            question='What is the price?'
-            answer={`Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too.`}
-            isOpened={false}
-          />
-
-          <Question
-            class=''
-            question='What is the price?'
-            answer={`Front-end engineers work closely with designers to make websites beautiful, functional, and fast. This Career Path will teach you not only the necessary languages and technologies, but how to think like a front-end engineer, too.`}
-            isOpened={false}
-          />
         </div>
       </div>
     </section>

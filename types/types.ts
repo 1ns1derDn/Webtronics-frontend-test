@@ -8,3 +8,10 @@ export type FormValues = {
   phone: string,
   email: string,
 }
+
+export type QuestionType = {
+  id: number,
+  class: string,
+  question: string,
+  answer: string,
+}
