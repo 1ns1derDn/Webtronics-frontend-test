@@ -14,7 +14,7 @@
   height: 600px;
   padding: 56px 0;
   @include flex($direction: column, $justify: space-between);
-  background: url(../../../assets/svg/contact-border.svg);
+  background: url(../../public/assets/svg/contact-border.svg);
 
   * {
     align-self: center;

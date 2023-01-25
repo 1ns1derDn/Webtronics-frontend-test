@@ -25,7 +25,7 @@
 }
 
 .borderOpened {
-  background: url(../../../assets/svg/review-frame-opened.svg);
+  background: url(../../public/assets/svg/review-frame-opened.svg);
   background-repeat: no-repeat;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .borderClosed {
-  background: url(../../../assets/svg/review-frame-closed.svg);
+  background: url(../../public/assets/svg/review-frame-closed.svg);
   background-repeat: no-repeat;
 }
 
@@ -47,7 +47,7 @@
 
 .imgWrapperOpened {
   width: 390px;
-  mask-image: url(../../../assets/img/rewiew-mask-opened.png);
+  mask-image: url(../../public/assets/img/rewiew-mask-opened.png);
 
   img {
     mask-repeat: no-repeat;
@@ -58,7 +58,7 @@
 
 .imgWrapperClosed {
   width: 182px;
-  mask-image: url(../../../assets/img/rewiew-mask-closed.png);
+  mask-image: url(../../public/assets/img/rewiew-mask-closed.png);
 
   img {
     mask-repeat: no-repeat;
