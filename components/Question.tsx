@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { select } from '../store/slices/questionsSlice';
+import { selectQuestion } from '../store/slices/questionsSlice';
 import styles from '../styles/components/question.module.scss';
 
 export default function Question(
@@ -10,11 +10,11 @@ export default function Question(
   const dispatch = useDispatch();
 
   function handleClick() {
-    dispatch(select(props.id));
+    dispatch(selectQuestion(props.id));
   }
 
   return (
-    <div key={props.id} className={`${styles.wrapper} ${props.class} ${props.isOpened ? styles.wrapperOpened : styles.wrapperClosed}`}>
+    <div className={`${styles.wrapper} ${props.class} ${props.isOpened ? styles.wrapperOpened : styles.wrapperClosed}`}>
       <div className={`${styles.border} ${props.isOpened ? styles.borderOpened : styles.borderClosed}`}>
       </div>
       <button

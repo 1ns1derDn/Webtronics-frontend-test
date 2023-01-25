@@ -23,6 +23,7 @@ export default function Questions(): JSX.Element {
           {questionsData.map((data) =>
             <Question
               id={data.id}
+              key={data.id}
               class={data.class}
               question={data.question}
               answer={data.answer}

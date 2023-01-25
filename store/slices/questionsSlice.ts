@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
 export interface QuestionState {
-  openedQuestion: number
+  openedQuestion: number,
 };
 
 const initialState: QuestionState = {
@@ -13,12 +13,12 @@ export const questionsSlice = createSlice({
   name: 'questions',
   initialState,
   reducers: {
-    select: (state, action: PayloadAction<number>) => {
+    selectQuestion: (state, action: PayloadAction<number>) => {
       state.openedQuestion = action.payload;
     },
   },
 });
 
-export const { select } = questionsSlice.actions;
+export const { selectQuestion } = questionsSlice.actions;
 
 export default questionsSlice.reducer;

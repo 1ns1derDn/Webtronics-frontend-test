@@ -15,3 +15,14 @@ export type QuestionType = {
   question: string,
   answer: string,
 }
+
+export type ReviewType = {
+  id: number,
+  class: string,
+  classOpened: string,
+  classClosed: string,
+  src: string,
+  offset: number,
+  title: string,
+  text: string,
+}
