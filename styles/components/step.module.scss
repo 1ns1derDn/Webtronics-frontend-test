@@ -17,15 +17,15 @@
 }
 
 .borderLeft {
-  background: url(../../../assets/svg/stroke-left.svg),
-    url(../../../assets/svg/step-frame.svg);
+  background: url(../../public/assets/svg/stroke-left.svg),
+    url(../../public/assets/svg/step-frame.svg);
   background-repeat: no-repeat;
   background-position: top right, center left;
 }
 
 .borderRight {
-  background: url(../../../assets/svg/stroke-right.svg),
-    url(../../../assets/svg/step-frame.svg);
+  background: url(../../public/assets/svg/stroke-right.svg),
+    url(../../public/assets/svg/step-frame.svg);
   background-repeat: no-repeat;
   background-position: top left, center right;
 }
