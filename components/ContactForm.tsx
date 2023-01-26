@@ -1,6 +1,7 @@
 import React from 'react';
-import { Formik, Form, Field } from 'formik';
+import { useForm, SubmitHandler } from "react-hook-form";
 import * as yup from 'yup';
+import { yupResolver } from "@hookform/resolvers/yup";
 import styles from '../styles/components/contact-form.module.scss';
 import Btn from './Btn';
 import { BtnTypes, FormValues } from '../types/types';
@@ -15,60 +16,65 @@ const validationSchema = yup.object().shape({
 });
 
 export default function ContactForm(): JSX.Element {
-  return (
-    <Formik
-      validationSchema={validationSchema}
-      initialValues={{
-        name: '',
-        phone: '',
-        email: '',
-      }}
-
-      onSubmit={async (values: FormValues, { resetForm }) => {
-        try {
-          const response = await axios({
-            method: 'post',
-            url: 'http://localhost:3004/feedback',
-            data: {
-              name: values.name,
-              phone: values.phone,
-              email: values.email,
-            }
-          });
-          console.log(response);
-        } catch (error) {
-          alert(error);
-          console.error(error);
+  const { register, handleSubmit, formState: { errors }, reset } = useForm<FormValues>({
+    mode: 'onTouched',
+    resolver: yupResolver(validationSchema),
+  });
+  const onSubmit: SubmitHandler<FormValues> = (values: FormValues) => {
+    try {
+      axios({
+        method: 'post',
+        url: 'http://localhost:3004/feedback',
+        data: {
+          name: values.name,
+          phone: values.phone,
+          email: values.email,
         }
-        resetForm();
-      }}
-    >
-      {({ errors, touched }) => {
-        return <Form className={styles.form}>
-          <label>
-            <Field className={`${(errors.name && touched.name) ? styles.inputError : styles.input} p1`}
-              name='name' type='text' placeholder='Name' />
-            {errors.name && touched.name && <div className={`${styles.errorDescription} p2`}>{errors.name}</div>}
-          </label>
-          <label>
-            <Field className={`${(errors.phone && touched.phone) ? styles.inputError : styles.input} p1`}
-              name='phone' type='text' placeholder='Phone' />
-            {errors.phone && touched.phone && <div className={`${styles.errorDescription} p2`}>{errors.phone}</div>}
-          </label>
-          <label>
-            <Field className={`${(errors.email && touched.email) ? styles.inputError : styles.input} p1`}
-              name='email' type='text' placeholder='E-mail' />
-            {errors.email && touched.email && <div className={`${styles.errorDescription} p2`}>{errors.email}</div>}
-          </label>
-          <Btn
-            class={styles.submitBtn}
-            text='Send'
-            width={497}
-            heigth={72}
-            type={BtnTypes.SUBMIT}
-          />
-        </Form>
-      }}
-    </Formik>
+      });
+    } catch (error) {
+      alert(`${error}, Please download distributive and run server with "yarn server" command`);
+      console.error(error);
+    }
+    reset();
+  };
+
+  return (
+
+    <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+      <label>
+        <input
+          className={`${(errors.name) ? styles.inputError : styles.input} p1`}
+          type='text'
+          placeholder='Name'
+          {...register('name')}
+        />
+        {errors.name && <div className={`${styles.errorDescription} p2`}>{errors.name.message}</div>}
+      </label>
+      <label>
+        <input
+          className={`${(errors.phone) ? styles.inputError : styles.input} p1`}
+          type='text'
+          placeholder='Phone'
+          {...register('phone')}
+        />
+        {errors.phone && <div className={`${styles.errorDescription} p2`}>{errors.phone.message}</div>}
+      </label>
+      <label>
+        <input
+          className={`${(errors.email) ? styles.inputError : styles.input} p1`}
+          type='text'
+          placeholder='E-mail'
+          {...register('email')}
+        />
+        {errors.email && <div className={`${styles.errorDescription} p2`}>{errors.email.message}</div>}
+      </label>
+      <Btn
+        class={styles.submitBtn}
+        text='Send'
+        width={497}
+        heigth={72}
+        type={BtnTypes.SUBMIT}
+      />
+    </form>
   );
 }
