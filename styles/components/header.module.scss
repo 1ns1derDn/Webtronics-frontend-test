@@ -5,20 +5,35 @@
   position: fixed;
   top: 0;
   width: 100%;
+  height: 100px;
   padding: 38px 350px 0 350px;
   @include flex($justify: space-between);
+  z-index: 2;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../../public/assets/svg/header-bg-fill.svg), url(../../public/assets/svg/header-bg-stroke.svg);
+  background-position: bottom center;
+  backdrop-filter: blur(10px);
   z-index: 2;
 }
 
 .logo {
   width: 169px;
   height: 33px;
+  z-index: 3;
 }
 
 .nav {
   width: 525px;
   height: 26px;
   @include flex($justify: space-between, $align: center);
+  z-index: 3;
 }
 
 .link {
