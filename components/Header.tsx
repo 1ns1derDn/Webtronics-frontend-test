@@ -22,7 +22,7 @@ export default function Header(): JSX.Element {
 
   return (
     <header className={styles.header}>
-      <div className={`${!isShown ? styles.hidden : null} ${styles.bg}`}></div>
+      <div className={`${!isShown ? styles.bg_hidden : null} ${styles.bg}`}></div>
       <a className={styles.linkLogo} href='#'>
         <img className={styles.logo} src='./assets/svg/logo-webtronics.svg' alt='Webtronics' />
       </a>
