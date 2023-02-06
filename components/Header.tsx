@@ -5,7 +5,9 @@ export default function Header(): JSX.Element {
   return (
     <header className={styles.header}>
       <div className={styles.bg}></div>
-      <img className={styles.logo} src='./assets/svg/logo-webtronics.svg' alt='Webtronics' />
+      <a className={styles.linkLogo} href='#'>
+        <img className={styles.logo} src='./assets/svg/logo-webtronics.svg' alt='Webtronics' />
+      </a>
       <nav className={styles.nav}>
         <a className={styles.link + ' p1'} href='#about'>About</a>
         <a className={styles.link + ' p1'} href='#programs'>Programs</a>
